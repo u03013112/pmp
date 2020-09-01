@@ -5,7 +5,7 @@ import random
 
 class SP2:
     def __init__(self,comic_id,chapter_id):
-        print('爬取一本书内容的类')
+        # print('爬取一本书内容的类')
         self.url = 'http://j.jinkongjianshe.com/api/comic/read_chapter?comic_id=%d&chapter_id=%d' % (comic_id,chapter_id)
         self.ua = 'baipiaoshiwokuaile'
     def sp(self):

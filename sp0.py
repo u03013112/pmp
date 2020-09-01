@@ -3,8 +3,7 @@ import requests
 
 class SP0:
     def __init__(self):
-        print('爬取目录的类')
-        # 一下拿1000个，爬完再说
+        # print('爬取目录的类')
         self.url = 'http://j.jinkongjianshe.com/api/comic/rank?page=1&limit=1000&sort=popularity'
     def sp(self):
         while True:

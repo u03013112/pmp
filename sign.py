@@ -9,10 +9,10 @@ class Sign:
     def sp(self):
         try:
             headers = {'User-Agent': self.ua}
-            r = requests.post(self.url,headers=headers)
+            r = requests.post(self.url,headers=headers,timeout=10)
             # data = r.json()['code']
-            data = r.text
-            print(data)
+            # data = r.text
+            # print(data)
             # self.data = data
             # return data
         except Exception as e:
