@@ -10,11 +10,11 @@ class Sign:
         try:
             headers = {'User-Agent': self.ua}
             r = requests.post(self.url,headers=headers)
-            data = r.json()['code']
+            # data = r.json()['code']
             # data = r.text
-            print(data)
+            # print(data)
             # self.data = data
-            return data
+            # return data
         except requests.exceptions.RequestException as e:
             print(e)
 
