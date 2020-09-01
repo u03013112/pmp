@@ -21,7 +21,7 @@ class SP2:
                 # print(data)
                 self.data = data
                 return data
-            except requests.exceptions.RequestException as e:
+            except Exception as e:
                 print(e)
     def randomUA(self):
         self.ua = str(random.random())

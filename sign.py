@@ -15,7 +15,7 @@ class Sign:
             print(data)
             # self.data = data
             # return data
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             print(e)
 
 if __name__=='__main__':  
