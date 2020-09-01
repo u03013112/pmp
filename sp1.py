@@ -17,4 +17,4 @@ class SP1:
 
 if __name__=='__main__':  
     s = SP1(234)
-    s.sp()
+    print(s.sp())
