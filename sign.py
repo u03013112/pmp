@@ -3,7 +3,7 @@ import requests
 
 class Sign:
     def __init__(self,ua):
-        print('爬取签到的类')
+        # print('爬取签到的类')
         self.url = 'http://j.jinkongjianshe.com/api/user/sign_in'
         self.ua = ua
     def sp(self):
