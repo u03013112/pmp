@@ -6,7 +6,7 @@ class SP0:
         # print('爬取目录的类')
         self.url = 'http://j.jinkongjianshe.com/api/comic/rank?page=1&limit=1000&sort=popularity'
     def sp(self):
-        while True:
+        for retry in range(10):
             try:
                 r = requests.get(self.url)
                 data = r.json()['data']['data']

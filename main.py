@@ -17,7 +17,7 @@ if __name__=='__main__':
     
     menu0 = SP0().sp()
 
-    for menu1 in menu0:
+    for index in range(31,len(menu0)):
         dir0 = menu1['name']
         filename = "%s/%s.sh" % (root,dir0)
         fo = open(filename, "w",encoding='utf-8')

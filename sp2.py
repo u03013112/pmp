@@ -9,7 +9,7 @@ class SP2:
         self.url = 'http://j.jinkongjianshe.com/api/comic/read_chapter?comic_id=%d&chapter_id=%d' % (comic_id,chapter_id)
         self.ua = 'baipiaoshiwokuaile'
     def sp(self):
-        while True:
+        for retry in range(10):
             try:
                 headers = {'User-Agent': self.ua}
                 r = requests.get(self.url,headers=headers)
