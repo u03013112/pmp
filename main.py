@@ -17,7 +17,7 @@ if __name__=='__main__':
     
     menu0 = SP0().sp()
 
-    for index in range(31,len(menu0)):
+    for index in range(59,len(menu0)):
         menu1 = menu0[index]
         dir0 = menu1['name']
         filename = "%s/%s.sh" % (root,dir0)
