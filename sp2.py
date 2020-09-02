@@ -23,6 +23,8 @@ class SP2:
                 return data
             except Exception as e:
                 print(e)
+        return None
+        
     def randomUA(self):
         self.ua = str(random.random())
         return self.ua

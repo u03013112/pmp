@@ -15,6 +15,7 @@ class SP0:
                 return data
             except Exception as e:
                 print(e)
+        return None
 
 if __name__=='__main__':  
     s = SP0()

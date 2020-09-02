@@ -34,6 +34,9 @@ if __name__=='__main__':
             fo.write( "mkdir -p %s/%s\n" % (dir0,dir1) )
             fo.write( "curl -o %s/%s/cover.jpg %s/%s\n" % (dir0,dir1,prefix,chapter['cover']))
             data = SP2(comic_id,chapter_id).sp()
+            if data == None:
+                fo.write( '###' )
+                continue
             images = data['images']
             for i in range(len(images)):
                 fo.write( "curl -o %s/%s/%03d.jpg %s/%s\n" % (dir0,dir1,i,prefix,images[i]))
