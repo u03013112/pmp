@@ -40,5 +40,5 @@ if __name__=='__main__':
             images = data['images']
             for i in range(len(images)):
                 fo.write( "curl -o %s/%s/%03d.jpg %s/%s\n" % (dir0,dir1,i,prefix,images[i]))
-            print(dir0,dir1,'ok')
+            print(index,'/',len(menu0),dir0,dir1,'ok')
         fo.close()
