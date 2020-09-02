@@ -27,14 +27,14 @@ if __name__=='__main__':
         id = menu1['id']
         menu2 = SP1(id).sp()
         for chapter in menu2:
-            dir1 = chapter['name']
-            fo.write( "mkdir -p %s/%s\n" % (dir0,dir1) )
-            fo.write( "curl -o %s/%s/cover.jpg %s/%s\n" % (dir0,dir1,prefix,chapter['cover']))
             comic_id = chapter['comic_id']
             chapter_id = chapter['chapter_id']
+            dir1 = '%d-%s' %(chapter_id,chapter['name'])
+            fo.write( "mkdir -p %s/%s\n" % (dir0,dir1) )
+            fo.write( "curl -o %s/%s/cover.jpg %s/%s\n" % (dir0,dir1,prefix,chapter['cover']))
             data = SP2(comic_id,chapter_id).sp()
             images = data['images']
             for i in range(len(images)):
-                fo.write( "curl -o %s/%s/%d.jpg %s/%s\n" % (dir0,dir1,i,prefix,images[i]))
+                fo.write( "curl -o %s/%s/%03d.jpg %s/%s\n" % (dir0,dir1,i,prefix,images[i]))
             print(dir0,dir1,'ok')
         fo.close()
