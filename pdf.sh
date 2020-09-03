@@ -9,7 +9,7 @@ do
     cs=`ls ../${download_path}/${file}`
     for c in $cs:
     do
-        cmd="python3 ../im2pdf.py ../${download_path}/${file}/${c} ${c}.pdf"
+        cmd="python3 ../im2pdf.py ../${download_path}/${file}/${c} ${file}/${c}.pdf"
         echo $cmd
         $cmd
     done
